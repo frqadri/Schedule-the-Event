@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class SignupActivity extends AppCompatActivity {
+public class AdminSignupActivity extends AppCompatActivity {
 
     TextView txtlogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_admin_signup);
 
         txtlogin = findViewById(R.id.txt_login);
         txtlogin.setOnClickListener(view -> {

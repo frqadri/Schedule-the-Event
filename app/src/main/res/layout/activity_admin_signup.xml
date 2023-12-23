@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B5A2FF"
-    tools:context=".SignupActivity">
+    tools:context=".AdminSignupActivity">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -15,34 +15,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_margin="5dp">
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:src="@drawable/logo" />
 
             <TextView
-                android:id="@+id/txt_signupv"
+                android:id="@+id/txt_adminsignup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="180dp"
-                android:text="SignUp"
+                android:layout_marginTop="35dp"
+                android:text="Admin Signup"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/txt_signupv"
-                android:layout_marginTop="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="120dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -92,17 +87,17 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tf_dob"
+                    android:id="@+id/tf_b_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Date of Birth"
-                    app:startIconDrawable="@drawable/ic_dob">
+                    android:hint="Business Name"
+                    app:startIconDrawable="@drawable/ic_business">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_dob"
+                        android:id="@+id/et_b_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="date" />
+                        android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

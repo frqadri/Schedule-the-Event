@@ -4,90 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F384DC"
+    android:background="#B5A2FF"
     tools:context=".LoginActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/txt_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="210dp"
-            android:text="Login"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/txt_login"
-            android:layout_marginTop="40dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_mail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo" />
 
-                android:hint="Email Address"
-                app:startIconDrawable="@drawable/ic_mail">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_mail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_passward"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Passward"
-                app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_lock">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_passward"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
-                android:id="@+id/btn_login"
+            <TextView
+                android:id="@+id/txt_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:icon="@drawable/ic_tick"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/logo"
+                android:layout_marginTop="230dp"
                 android:text="Login"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                />
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly_etlogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_login"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
 
-    </RelativeLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tf_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
 
+                    android:hint="Email Address"
+                    app:startIconDrawable="@drawable/ic_mail">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tf_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_lock">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:id="@+id/txt_forgot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/forgot_password" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_tick" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_userlogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ly_etlogin"
+                android:layout_marginTop="250dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an Account? " />
+
+                <TextView
+                    android:id="@+id/txt_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Signup"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/ly_userlogin"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Are You Admin? " />
+
+                <TextView
+                    android:id="@+id/txt_adminsignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Signup"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
