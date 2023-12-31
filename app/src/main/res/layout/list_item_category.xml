@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_margin="10dp">
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp">
 
-    <ImageView
-        android:id="@+id/img_category"
-        android:layout_width="60dp"
-        android:layout_height="60dp"/>
-
-    <TextView
-        android:id="@+id/txt_category"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="5dp">
 
-        android:padding="5dp"
-        android:fontFamily="@font/georgiapro_cond_regular"
-        android:textColor="@color/Primary_Purple"/>
+        <ImageView
+            android:id="@+id/img_category"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/hall" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/georgiapro_cond_regular"
+            android:padding="5dp"
+            android:text="All"
+            android:textColor="@color/Primary_Purple" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
