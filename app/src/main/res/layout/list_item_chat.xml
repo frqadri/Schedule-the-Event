@@ -2,16 +2,14 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="5dp"
+    android:layout_height="wrap_content"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true"
-    app:contentPadding="5dp">
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
         android:layout_margin="10dp">
 
         <LinearLayout
@@ -26,38 +24,32 @@
 
             <TextView
                 android:id="@+id/txt_hall_name"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:fontFamily="@font/georgiapro_cond_bold"
                 android:text="Hall Name"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/txt_msg_title"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginLeft="3dp"
-                android:fontFamily="@font/georgiapro_cond_regular"
-                android:text="message title"
-                android:textSize="16sp" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/txt_msg_description"
+            android:id="@+id/txt_msg"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="20dp"
-            android:text="message description" />
+            android:text="Message here..." />
 
         <TextView
             android:id="@+id/txt_msg_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_alignParentBottom="true"
+            android:gravity="end"
             android:layout_marginLeft="80dp"
             android:text="time" />
     </RelativeLayout>
+    
+
 </androidx.cardview.widget.CardView>

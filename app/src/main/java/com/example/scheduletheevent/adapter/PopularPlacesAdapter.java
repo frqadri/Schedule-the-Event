@@ -1,6 +1,7 @@
 package com.example.scheduletheevent.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,19 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.scheduletheevent.BookingPageActivity;
 import com.example.scheduletheevent.R;
 import com.example.scheduletheevent.data.PopularPlaces;
 
 import java.util.ArrayList;
 
-public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdapter.ViewHolder>{
+public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdapter.ViewHolder> {
     private Context context;
     private ArrayList<PopularPlaces> popularplaces;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-//        private TextView url;
-        private TextView hName,hLocation,hPrice;
+        //        private TextView url;
+        private TextView hName, hLocation, hPrice;
         private ImageView imgurl;
+
         public ViewHolder(View view) {
             super(view);
             imgurl = view.findViewById(R.id.img_P_Places);
@@ -49,14 +52,16 @@ public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdap
             return hPrice;
         }
     }
-    public PopularPlacesAdapter(ArrayList<PopularPlaces> p_p, Context context){
+
+    public PopularPlacesAdapter(ArrayList<PopularPlaces> p_p, Context context) {
         this.popularplaces = p_p;
         this.context = context;
     }
+
     @NonNull
     @Override
     public PopularPlacesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.popular_places_category,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.popular_places_category, parent, false);
         return new ViewHolder(view);
     }
 
@@ -67,6 +72,19 @@ public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdap
         holder.gethName().setText(popular_places.getPlace_name());
         holder.gethLocation().setText(popular_places.getPlace_location());
         holder.gethPrice().setText(popular_places.getPrice());
+
+        holder.imgurl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, BookingPageActivity.class);
+                intent.putExtra("img", popular_places.getUrl());
+                intent.putExtra("hName", popular_places.getPlace_name());
+                intent.putExtra("hLocation", popular_places.getPlace_location());
+                intent.putExtra("hPrice", popular_places.getPrice());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
 
         Glide
                 .with(context)

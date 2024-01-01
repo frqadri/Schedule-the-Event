@@ -6,7 +6,7 @@ public class PopularPlaces {
     private String place_location;
     private String price;
 
-    public PopularPlaces(String url, String place_name, String place_location, String price) {
+    public PopularPlaces(String place_name, String place_location, String price, String url) {
         this.url = url;
         this.place_name = place_name;
         this.place_location = place_location;

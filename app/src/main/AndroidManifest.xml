@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ScheduleTheEvent"
         tools:targetApi="31">
         <activity
+            android:name=".BookingPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminSignupActivity"
             android:exported="false" />
         <activity
@@ -41,7 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

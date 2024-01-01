@@ -37,18 +37,41 @@
             android:fontFamily="@font/helveticaworld_regular"
             android:text="Location" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginTop="-30dp">
+            <TextView
+                android:id="@+id/txt_RS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaworld_bold"
+                android:text="RS:"
+                android:textAlignment="textEnd"
+                android:textSize="11sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaworld_bold"
+                android:text="Price"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"
+                android:textColor="@color/Primary_Purple"/>
 
-        <TextView
-            android:id="@+id/txt_price"
+            <TextView
+            android:id="@+id/txt_perhead"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"
-            android:layout_marginBottom="5dp"
             android:fontFamily="@font/helveticaworld_bold"
-            android:text="Price"
+            android:text="/Head"
             android:textAlignment="textEnd"
             android:textSize="18sp"
             android:textColor="@color/Primary_Purple"/>
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
