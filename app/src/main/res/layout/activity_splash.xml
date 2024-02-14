@@ -17,15 +17,12 @@
         android:id="@+id/animationView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:lottie_rawRes="@raw/splashload"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"/>
-
-
-
+        app:lottie_rawRes="@raw/splashload" />
 
 
 </RelativeLayout>
